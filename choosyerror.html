@@ -25,7 +25,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/jcmuller/simplemessage">View on GitHub</a>
 
-          <h1 id="project_title">Simple Message</h1>
+          <h1 id="project_title">Choosy</h1>
           <h2 id="project_tagline"></h2>
         </header>
     </div>
@@ -33,8 +33,17 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h1 id="heading-1"></h1>
-        <div id="content"></div>
+        <h1 id="heading-1">Error</h1>
+        <p>You need to create <span id="home"></span>/.config/choosy/config.</p>
+        <p>An example is:</p>
+        <code>
+          ---
+          default:
+          profile: Default
+          rules:
+          - uri: https?://google.com/foo
+          profile: Profile 1
+        </code>`
       </section>
     </div>
 
@@ -60,8 +69,7 @@
           urlParams[decode(match[1])] = decode(match[2]);
       })();
 
-      document.getElementById('heading-1').innerText = urlParams.heading;
-      document.getElementById('content').innerHTML = urlParams.content;
+      document.getElementById('home').innerHTML = urlParams.home;
     </script>
   </body>
 </html>
