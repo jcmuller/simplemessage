@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width,maximum-scale=2">
+    <meta name="description" content="simplemessage : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/simplemessage/assets/css/style.css?v=a6c0af429f7f6d87a8242c520e657f2e5f23dd7d">
+
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+    <title>Heading 1 | simplemessage</title>
+    <meta property="og:title" content="Heading 1" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="canonical" href="http://juancmuller.com/simplemessage/" />
+    <meta property="og:url" content="http://juancmuller.com/simplemessage/" />
+    <meta property="og:site_name" content="simplemessage" />
+    <script type="application/ld+json">
+      {"name":"simplemessage","description":null,"author":null,"@type":"WebSite","url":"http://juancmuller.com/simplemessage/","image":null,"publisher":null,"headline":"Heading 1","dateModified":null,"datePublished":null,"sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+  </head>
+
+  <body>
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jcmuller/simplemessage">View on GitHub</a>
+
+          <h1 id="project_title">Simple Message</h1>
+          <h2 id="project_tagline"></h2>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1 id="heading-1"></h1>
+        <p id="content"></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">simplemessage maintained by <a href="https://github.com/jcmuller">jcmuller</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      var urlParams;
+      (window.onpopstate = function () {
+        var match,
+          pl     = /\+/g,  // Regex for replacing addition symbol with a space
+          search = /([^&=]+)=?([^&]*)/g,
+          decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+          query  = window.location.search.substring(1);
+
+        urlParams = {};
+        while (match = search.exec(query))
+          urlParams[decode(match[1])] = decode(match[2]);
+      })();
+
+      document.getElementById('heading-1').innerText = urlParams.heading;
+      document.getElementById('content').innerText = urlParams.content;
+    </script>
+  </body>
+</html>
