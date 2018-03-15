@@ -34,7 +34,7 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <h1 id="heading-1"></h1>
-        <p id="content"></p>
+        <div id="content"></div>
       </section>
     </div>
 
@@ -61,7 +61,7 @@
       })();
 
       document.getElementById('heading-1').innerText = urlParams.heading;
-      document.getElementById('content').innerText = urlParams.content;
+      document.getElementById('content').innerHTML = urlParams.content;
     </script>
   </body>
 </html>
