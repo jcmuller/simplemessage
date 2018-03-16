@@ -38,23 +38,21 @@
         <p>An example is:</p>
 <pre>
 ---
-default:
-  profile: Default
-  browser: chromium
-browsers:
-  chromium:
-    path: chromium-browser
-    profile: --profile-directory=%s
-  firefox:
-    path: firefox
-    profile: -P %
+default: &default
+  base: chromium-browser
+  profile: --profile-directory=%s
+  args: Default Profile
 rules:
-  - uri: https?://google.com/foo
-    profile: Profile 1
-    browser: firefox
-  - uri: http://yahoo.com/bar
-    profile: Profile 2
-    browser: chromium
+  - <<: *default
+    args: First Profile
+    args:
+    uris:
+      - hotmail.com
+      - gmail.com
+  - <<: *default
+    args: Second Profile
+    uris:
+      - (cnn|nyt).com
 </pre>
       </section>
     </div>
