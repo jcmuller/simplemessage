@@ -39,12 +39,22 @@
 <pre>
 ---
 default:
-profile: Default
+  profile: Default
+  browser: chromium
+browsers:
+  chromium:
+    path: chromium-browser
+    profile: --profile-directory=%s
+  firefox:
+    path: firefox
+    profile: -P %
 rules:
-- uri: https?://google.com/foo
-  profile: Profile 1
-- uri: https?://yahoo.com/foo
-  profile: Profile 2
+  - uri: https?://google.com/foo
+    profile: Profile 1
+    browser: firefox
+  - uri: http://yahoo.com/bar
+    profile: Profile 2
+    browser: chromium
 </pre>
       </section>
     </div>
